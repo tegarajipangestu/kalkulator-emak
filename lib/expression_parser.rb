@@ -14,11 +14,12 @@ module ExpressionParser
   end
 
   def parse_number(number)
-    return false unless matches = unsigned_number_regex.match(number)
+    return false unless matches = number_regex.match(number)
     parse_unsigned(matches[0])
   end
 
   def parse_unsigned(unsigned)
+    return false unless matches = number_regex.match(number)
     unsigned_regex === unsigned
   end
 end

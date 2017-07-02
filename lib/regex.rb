@@ -12,7 +12,7 @@ module Regex
   end
 
   def unsigned_number_regex
-    /(?:(\d)+(?:\.(\d)+)?)/
+    /(.*)+(?:\.(\d)+)?/
   end
 
   def sign_regex
